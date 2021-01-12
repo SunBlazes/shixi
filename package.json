@@ -5,10 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "yarn run serve"
   },
   "dependencies": {
+    "clipboard": "^2.0.6",
     "core-js": "^3.6.5",
+    "js-cookie": "^2.2.1",
+    "moment": "^2.29.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
