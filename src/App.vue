@@ -2,9 +2,10 @@
   <div id="app">
     <!-- <clipboard /> -->
     <!-- <cookies /> -->
-    <skeleton />
+    <!-- <skeleton /> -->
     <!-- <space /> -->
-    <!-- <css3d /> -->
+    <css3d />
+    <!-- <test /> -->
   </div>
 </template>
 
@@ -14,6 +15,9 @@ import Cookies from "./components/js-cookie";
 import Skeleton from "./components/skeleton";
 import Space from "./components/space-loading";
 import Css3d from "./components/css3-3d";
+import Test from "./components/clickoutside";
+import nprogress from "nprogress";
+import "nprogress/nprogress.css";
 export default {
   name: "App",
   components: {
@@ -22,6 +26,16 @@ export default {
     Skeleton,
     Space,
     Css3d,
+    Test,
+  },
+  async mounted() {
+    nprogress.start();
+    // nprogress.inc(0.4);
+    await new Promise((resolve) => setTimeout(() => resolve(), 2000));
+    // 设置进度条的进度
+    // nprogress.set(0.5);
+    // await new Promise((resolve) => setTimeout(() => resolve(), 2000));
+    nprogress.done();
   },
 };
 </script>
@@ -38,6 +52,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 </style>
