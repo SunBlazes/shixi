@@ -4,8 +4,9 @@
     <!-- <cookies /> -->
     <!-- <skeleton /> -->
     <!-- <space /> -->
-    <css3d />
+    <!-- <css3d /> -->
     <!-- <test /> -->
+    <dayjs />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Css3d from "./components/css3-3d";
 import Test from "./components/clickoutside";
 import nprogress from "nprogress";
 import "nprogress/nprogress.css";
+import Dayjs from "./components/dayjs";
 export default {
   name: "App",
   components: {
@@ -27,6 +29,7 @@ export default {
     Space,
     Css3d,
     Test,
+    Dayjs,
   },
   async mounted() {
     nprogress.start();
